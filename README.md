@@ -19,14 +19,14 @@ Este proyecto representa mi evolución en el desarrollo web durante el **segundo
 
 ## 🛠️ Tecnologías y Metodologías
 
-* **HTML5:** Estructura optimizada para accesibilidad y SEO.
+* **HTML5:** Estructura optimizada para accesibilidad.
 * **CSS3:** * Maquetación mediante **Flexbox** y **CSS Grid** para un diseño equilibrado.
   * Diseño de componentes (formularios, botones con efectos hover, cards).
   * Estilización personalizada de la interfaz de usuario (UI).
 * **Gestión de Proyectos:** Organización profesional de directorios y control de versiones con Git.
 
 ## 🧠 Evolución Técnica (Retos del 2º Trimestre)
-A diferencia del primer trimestre, en este proyecto puse especial foco en la **experiencia de usuario (UX)** y en la **limpieza del código CSS**. El mayor reto fue lograr una armonía visual entre los elementos multimedia (pósters) y el contenido textual, manteniendo una estructura coherente en todas las páginas.
+A diferencia del primer trimestre, en este proyecto puse especial foco en la **experiencia de usuario** y en la **limpieza del código CSS**. El mayor reto fue lograr una armonía visual entre los elementos multimedia (pósters) y el contenido textual, manteniendo una estructura coherente en todas las páginas.
 
 ## 📁 Estructura del Proyecto
 
