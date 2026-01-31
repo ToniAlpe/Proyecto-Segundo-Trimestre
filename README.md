@@ -1,6 +1,6 @@
 # 🎬 MovieProject - Espacio Cinematográfico Personal
 
-[![Ver Web](https://img.shields.io/badge/Live_Demo-Haz_clic_aquí-green?style=for-the-badge&logo=google-chrome&logoColor=white)](https://tonialpe.github.io/ProyectoWeb2/)
+[![Ver Web](https://img.shields.io/badge/Live_Demo-Haz_clic_aquí-green?style=for-the-badge&logo=google-chrome&logoColor=white)](https://tonialpe.github.io/Proyecto-Segundo-Trimestre/)
 
 Este es mi proyecto de desarrollo web del segundo trimestre de **DAM**. Se trata de una plataforma dedicada al séptimo arte, diseñada para compartir recomendaciones, análisis de películas y explorar la importancia cultural del cine.
 
