@@ -1,30 +1,37 @@
-# 🎬 MovieProject - Espacio Cinematográfico Personal
+# 🎬 MovieProject - Diseño de Interfaz y Cultura Cinematográfica
 
-[![Ver Web](https://img.shields.io/badge/Live_Demo-Haz_clic_aquí-green?style=for-the-badge&logo=google-chrome&logoColor=white)](https://tonialpe.github.io/Proyecto-Segundo-Trimestre/)
+<p align="center">
+  <img src="assets/logo final.png" alt="Logo MovieProject" width="200"/>
+</p>
 
-Este es mi proyecto de desarrollo web del segundo trimestre de **DAM**. Se trata de una plataforma dedicada al cine, diseñada para compartir recomendaciones, análisis de películas y explorar la importancia cultural del cine.
+[![Ver Web en Vivo](https://img.shields.io/badge/Live_Demo-Haz_clic_aquí-green?style=for-the-badge&logo=google-chrome&logoColor=white)](https://tonialpe.github.io/Proyecto-Segundo-Trimestre/)
+![Curso](https://img.shields.io/badge/Curso-1%C2%BA%20DAM-orange?style=for-the-badge)
+![Trimestre](https://img.shields.io/badge/Proyecto-2%C2%BA%20Trimestre-success?style=for-the-badge)
 
-## 🚀 Secciones de la Web
+Este proyecto representa mi evolución en el desarrollo web durante el **segundo trimestre de DAM**. Se centra en la creación de una plataforma cinematográfica con una estética cuidada y una estructura de navegación optimizada para el usuario.
 
-* **Página de Inicio:** Presentación personal y reflexión sobre el impacto emocional y cultural de las películas.
-* **Cartelera:** Espacio dedicado a la visualización de los títulos más relevantes.
-* **Tabla de Datos:** Implementación de tablas HTML para organizar información técnica o comparativa de filmes.
-* **Sección de Información:** Análisis detallado sobre la evolución del cine, desde el blanco y negro hasta las producciones actuales.
-* **Acceso de Usuario:** Formulario de Login diseñado con validaciones de interfaz.
+## 🚀 Secciones Destacadas
 
-## 🛠️ Tecnologías Aplicadas
+* **Página de Inicio:** Introducción al impacto cultural del cine con un diseño de login integrado.
+* **Cartelera Interactiva:** Galería visual de títulos con gestión avanzada de imágenes y layouts.
+* **Análisis Técnico:** Uso de tablas HTML avanzadas para la comparativa de datos cinematográficos.
+* **Evolución del Cine:** Sección informativa con maquetación de contenido extenso sobre la historia del séptimo arte.
 
-* **HTML5:** Uso de etiquetas estructurales para mejorar la accesibilidad.
-* **CSS3:** * Diseño de **Layouts** para organizar el contenido de forma clara.
-    * Estilización de formularios y botones.
-    * Uso de recursos gráficos personalizados (Logos, imágenes temáticas).
-* **GitHub Pages:** Despliegue automático para visualización en vivo.
+## 🛠️ Tecnologías y Metodologías
+
+* **HTML5:** Estructura optimizada para accesibilidad y SEO.
+* **CSS3:** * Maquetación mediante **Flexbox** y **CSS Grid** para un diseño equilibrado.
+  * Diseño de componentes (formularios, botones con efectos hover, cards).
+  * Estilización personalizada de la interfaz de usuario (UI).
+* **Gestión de Proyectos:** Organización profesional de directorios y control de versiones con Git.
+
+## 🧠 Evolución Técnica (Retos del 2º Trimestre)
+A diferencia del primer trimestre, en este proyecto puse especial foco en la **experiencia de usuario (UX)** y en la **limpieza del código CSS**. El mayor reto fue lograr una armonía visual entre los elementos multimedia (pósters) y el contenido textual, manteniendo una estructura coherente en todas las páginas.
 
 ## 📁 Estructura del Proyecto
 
 ```text
-├── assets/             # Imágenes y recursos visuales (Logos, iconos)
-├── pages/              # Páginas secundarias (Cartelera, Tabla, Información)
-├── index.HTML          # Página principal y estructura de Login
-└── README.md           # Documentación del proyecto
-
+├── assets/             # Branding, posters y recursos gráficos
+├── pages/              # Módulos: Cartelera, Tablas, Información
+├── index.html          # Punto de entrada y sistema de acceso
+└── README.md           # Documentación técnica
