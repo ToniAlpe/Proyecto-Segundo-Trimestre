@@ -1,0 +1,540 @@
+/*Universal*/
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'system-ui';
+}
+
+/*Estilo para el footer (pie de pagina)*/
+.footer {
+   background-color: rgb(63, 60, 60); /* Color de fondo*/
+    color: white; /* Color del texto*/
+    text-align: center; /* Centrar el texto*/
+    padding: 20px; /* Espacio interno*/
+    margin-top: 40px; /* Separación respecto al contenido*/
+    border-top: 2px solid red;
+}
+
+/* 
+------------------------------------
+         Barra de navegación
+------------------------------------
+*/
+
+.menu-principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center; /*Cuando hago el wrap lo que se baje abajo por culpa del espacio este se pone en el centro*/
+    padding: 10px;
+    /*margin: 5px;
+    border-radius: 8px; /*por si lo quiero poner con margen y con borde redondeado, no ocupe toda la pantalla*/
+    background-color: rgb(71, 70, 70);
+    color: white;
+    border-bottom: 3px solid red;
+}
+
+.logo img{
+    height: 100px;
+    display: block; /*Elina un margen en la parte baja que tiene por defecto las imagenes*/
+}
+
+nav {
+    display: flex;
+    gap: 50px; /*Espacio que hay entre los enlaces*/
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: large;
+
+    /*Transiciones (ayudado por la IA para aprender a hacerlo para siguientes proyectos)*/
+
+    /*transicionamos el color, el tamaño (transform) y el fondo (en este caso no lo utilizo)*/
+
+    transition: color 0.4s ease, transform 0.3s ease;
+    /*Se amplia el 20% que le he dicho en el hover pero de manera suave (transform)*/
+    /*Pasa de blanco a rojo de forma suave (color)*/
+
+    /* DIFERENTES TIPOS DE TRANSICIONES (IA)
+    linear: La velocidad es constante de principio a fin. Se ve un poco artificial, como un movimiento mecánico.
+    ease (el que viene por defecto): Empieza despacio, acelera en el medio y termina muy despacio. Es el más natural para la vista.
+    ease-in: Empieza lento y termina rápido. Ideal para efectos de salida.
+    ease-out: Empieza rápido y termina lento. Da la sensación de que el elemento "aterriza" suavemente. Es perfecto para cuando el menú se amplía al pasar el ratón.
+    ease-in-out: Es una mezcla de los dos anteriores: empieza lento, se mueve normal y termina lento.*/
+}
+
+nav a:hover {
+    color: red;
+    /*font-size: large; Esto hace lo mismo pero de manera brusca (como en el anterior proyecto)*/
+    transform: scale(1.2); /* Se amplía un 20% */
+}
+
+.formulario-acceso {
+    display: flex;
+    flex-direction: column; /*Para que este en columna sino pongo esto se me ponen en fila*/
+    gap: 5px; /*Espacio entre los bloques del formulario*/
+    /*background-color: red;
+    padding: 0.5em;
+    border-radius: 8px; 
+    /*Por si le quiero meter un fondo al formulario, no lo hago porque creo que me penaliza*/
+}
+
+.fila1 {
+    display: flex;
+    justify-content: flex-end; /*Alinea al final del contenedor*/
+    align-items: center;
+    gap: 35px; /*Espacio entre texto y cudrado*/
+}
+
+.fila2 {
+    display: flex;
+    justify-content: flex-end; /*Alinea al final del contenedor*/
+    align-items: center;
+    gap: 10px; /*Espacio entre texto y cudrado*/
+}
+
+/* 
+------------------------------------
+         Sección imagenes
+------------------------------------
+*/
+
+.contenedorGrid {
+    display: grid; /*"rejilla" todos los hijos directos (articles) se convierten en elementos de la cuadrícula*/
+    grid-template-columns: repeat(6, 1fr); /*Primer numero (numero de columnas) segundo numero (espacio, en mi caso he puesto 1fr para que el propio navegador divide todo el ancho de la pantalla en 6 fracciones pero tambien se podria poner una media en px)*/
+    /*Tengo que poner el repeat por que sino tengo que repetir el grid template columns 6 veces (no es para nada practico)*/
+    gap: 10px; /*Espacio entre peliculas*/
+    padding: 20px; /*No toque las peliculas en el borde de la pagina (para que no quede feo)*/
+    justify-content: center; /*Centra todo el bloque de la "rejilla" HORIZONTALMENTE*/
+    align-items: center; /*Lo mismo pero en forma VERTICAL*/
+
+    /*OTRA FORMA ("con WRAP" y con dolor de cabeza incluido)*/
+    /*grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); /*auto-fit --> El navegador calcula las columnas que tiene que poner*/
+    /*minmas --> Si una foto mide menos de 170px (lo que tenia) hace un salto de linea y el 1fr (propio navegador divide el ancho) se reparte equitativamente en las peliculas*/
+    /*Esto no me funciona porqeu yo trabajo en una pantalla de 3840 X 2160 y cuando me voy a 1920 X 1080 se me va las imagenes a la...*/
+}
+
+.pelicula {
+    width: 200px;
+    /*Tengo que poner eso para que cuando pases el mouse y se amplie la imagen que no se llegue a salir del recuadro (visto en clase)*/
+    overflow: hidden;
+}
+
+.pelicula img:hover {
+    /*Transición (ayuda de la IA)*/
+    
+    /*1Mantienes la proporcion de la imagen de un 100% para que no se deforme la imagen y para poder trabajar en los 2 ejes.1 Se amplia un 10%*/
+    transform: scale(1.1);
+}
+
+.pelicula img {
+    width: 100%;
+    height: 300px;
+    /*Transición (ayuda con la IA)*/
+    transition: transform 0.3s ease-in-out;
+}
+
+.rotulo {
+    /*Posicion del texto*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    /*Cajita*/
+    background-color: black;
+    color: white;
+    padding: 5px; /*Para que haya espoacio entre el texto y el rotulo por dentro (relleno)*/
+    height: 40px; /*Altura de la caja para que todas sean las mismas*/
+    border: 3px solid red; /*Borde alrededor del rotulo*/
+}
+
+/* 
+------------------------------------
+            Tabla
+------------------------------------
+*/
+
+.contenedor-tabla {
+    text-align: center;
+    margin: 40px auto; /* Centra el contenedor en la página */
+    width: 80%;
+    table-layout: fixed; /* Para que las columnas tengan el mismo ancho */
+    border-collapse: collapse; /* Para unir bordes */
+    /*border-color: red;*/ /*Esto de aqui tambien funciona pero no me permite ponerle grosor*/
+    border: 3px solid red;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+    background-color: rgb(63, 60, 60);
+    color: white;
+    height: 60px; /* Controla la altura total de la caja negra */
+    width: 200px; /* Controla el ancho de la columna */
+}
+
+.filaImpar {
+    background-color:lightcoral;
+}
+
+.filaPar {
+    background-color: lightgray;
+}
+
+/* 
+------------------------------------
+        enlazar imagen cartelera
+            con la tabla
+------------------------------------
+*/
+
+.imagen1 {
+    background-image: url('../assets/transformers.jpg'); /* Establece la imagen */
+    background-size: cover; /* Cubre todo el espacio sin deformar */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita (por si acaso, aunque en mi caso no hace nada ya que la imagen no es la suficientemente pequeña) */
+    width: 100%; /* Ancho de la celda */
+    height: 250px; 
+    /*height: 300px; /*Si pongo 300px la imagen se corta aunque esto depende del zoom que tengas en el navegador*/
+}
+
+.imagen2 {
+    background-image: url('../assets/galaxia.jpg'); /* Establece la imagen */
+    background-size: cover; /* Cubre todo el espacio sin deformar */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita (por si acaso, aunque en mi caso no hace nada ya que la imagen no es la suficientemente pequeña) */
+    width: 100%; /* Ancho de la celda */
+    height: 300px;
+}
+
+.imagen3 {
+    background-image: url('../assets/dragonball.jpg'); /* Establece la imagen */
+    background-size: cover; /* Cubre todo el espacio sin deformar */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita (por si acaso, aunque en mi caso no hace nada ya que la imagen no es la suficientemente pequeña) */
+    width: 100%; /* Ancho de la celda */
+    height: 300px;
+}
+
+.imagen4 {
+    background-image: url('../assets/jumanji.jpg'); /* Establece la imagen */
+    background-size: cover; /* Cubre todo el espacio sin deformar */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita (por si acaso, aunque en mi caso no hace nada ya que la imagen no es la suficientemente pequeña) */
+    width: 100%; /* Ancho de la celda */
+    height: 300px;
+}
+
+.imagen5 {
+    background-image: url('../assets/ironman.jpg'); /* Establece la imagen */
+    background-size: cover; /* Cubre todo el espacio sin deformar */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita (por si acaso, aunque en mi caso no hace nada ya que la imagen no es la suficientemente pequeña) */
+    width: 100%; /* Ancho de la celda */
+    height: 300px;
+}
+
+.imagen6 {
+    background-image: url('../assets/thor.webp'); /* Establece la imagen */
+    background-size: cover; /* Cubre todo el espacio sin deformar */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita (por si acaso, aunque en mi caso no hace nada ya que la imagen no es la suficientemente pequeña) */
+    width: 100%; /* Ancho de la celda */
+    height: 300px;
+}
+
+.imagen7 {
+    background-image: url('../assets/vengadores.webp'); /* Establece la imagen */
+    background-size: cover; /* Cubre todo el espacio sin deformar */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita (por si acaso, aunque en mi caso no hace nada ya que la imagen no es la suficientemente pequeña) */
+    width: 100%; /* Ancho de la celda */
+    height: 300px;
+}
+
+.imagen8 {
+    background-image: url('../assets/lobezno.webp'); /* Establece la imagen */
+    background-size: cover; /* Cubre todo el espacio sin deformar */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita (por si acaso, aunque en mi caso no hace nada ya que la imagen no es la suficientemente pequeña) */
+    width: 100%; /* Ancho de la celda */
+    height: 300px;
+}
+
+.imagen9 {
+    background-image: url('../assets/Oppenheimer.jpg'); /* Establece la imagen */
+    background-size: cover; /* Cubre todo el espacio sin deformar */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita (por si acaso, aunque en mi caso no hace nada ya que la imagen no es la suficientemente pequeña) */
+    width: 100%; /* Ancho de la celda */
+    height: 300px;
+}
+
+.imagen10 {
+    background-image: url('../assets/ready.jpg'); /* Establece la imagen */
+    background-size: cover; /* Cubre todo el espacio sin deformar */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita (por si acaso, aunque en mi caso no hace nada ya que la imagen no es la suficientemente pequeña) */
+    width: 100%; /* Ancho de la celda */
+    height: 300px;
+}
+
+.imagen11 {
+    background-image: url('../assets/alita.jpg'); /* Establece la imagen */
+    background-size: cover; /* Cubre todo el espacio sin deformar */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita (por si acaso, aunque en mi caso no hace nada ya que la imagen no es la suficientemente pequeña) */
+    width: 100%; /* Ancho de la celda */
+    height: 300px;
+}
+
+.imagen12 {
+    background-image: url('../assets/capitan.webp'); /* Establece la imagen */
+    background-size: cover; /* Cubre todo el espacio sin deformar */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita (por si acaso, aunque en mi caso no hace nada ya que la imagen no es la suficientemente pequeña) */
+    width: 100%; /* Ancho de la celda */
+    height: 300px;
+}
+
+/* 
+------------------------------------
+            INICIO
+------------------------------------
+*/
+
+.contenedor-inicio {
+    display: flex;
+    max-width: 1200px; /* Ancho máximo */
+    margin: 40px auto; /* Centra el contenedor en la página */
+}
+
+.contenedor-inicio p {
+    margin-bottom: 20px; /*Me ahorro lo de poner br en html*/
+}
+
+.sobre-mi {
+    background-color: rgb(63, 60, 60);
+    color: white;
+    width: 100%;
+    border-radius: 8px;
+    padding: 30px;
+    border: 5px solid red;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.sobre-mi h2 {
+    color: white;
+    text-align: center;
+}
+
+.sobre-mi img {
+    float: right;
+    width: 30%;
+    height: auto;
+    border-radius: 100%; /*Al tener esto creo que no hace falta poner los margenes a la izquierda y abajo, lo he tenido que poner en la otra imagen*/
+}
+
+.contenedorimg-inicio {
+    display: flex; /* Usa flex para centrar la imagen dentro de su contenedor */
+    justify-content:center;
+    padding: 20px;
+}
+
+.contenedorimg-inicio img {
+    width: 50%;
+    height: auto;
+    /* Estilos opcionales para la imagen */
+    border: 5px solid rgb(63, 60, 60);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.5); /*Desplazamiento horizonta, vertical, difuminado*/ /*Ultimo numero me indica la transparencia al 50%*/
+}
+
+.importancia-peliculas {
+    background-color: rgb(63, 60, 60);
+    color: white;
+    width: 100%;
+    border-radius: 8px;
+    padding: 30px;
+    border: 5px solid red;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.importancia-peliculas h2 {
+    color: white;
+    text-align: center;
+}
+
+.importancia-peliculas img {
+    float: left;
+    width: 20%;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;  /*Separa el texto por la derecha*/
+    margin-bottom: 10px; /*Separa el texto si este llegara a pasar por debajo*/
+}
+
+/* 
+------------------------------------
+            Media Queries
+------------------------------------
+*/
+
+/*Ayuda IA y viendo videos para ver sintaxis (dolor de cabeza)*/
+/* TABLET: Cuando la pantalla mide menos de 1200px, salta a 4 columnas */
+/*Esto es una funcionalidad que tiene CSS*/
+@media (max-width: 1200px) {
+    .contenedorGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* MÓVIL: Cuando mide menos de 800px, salta a 2 columnas */
+@media (max-width: 750px) {
+    .contenedorGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 
+------------------------------------
+        Sección información
+------------------------------------
+*/
+
+/* Estilos generales para ambas secciones */
+.seccion-texto {
+    margin: 40px;
+    /*Por defecto tendria un width: 100%; y por eso no hace falta poner el margin: 0 auto; aa no ser que cambies el width*/
+    
+    /*Cajita*/
+    background-color: rgb(63, 60, 60);
+    color: white;
+    padding: 4%;
+    border-radius: 8px;
+    border: 3px solid red;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden; /*Si el texto es corto el contenedor que envuelve la foto y el texto se achica dando lugar a que la foto se quede fuera de la caja o parte*/
+}
+
+.seccion-texto p {
+    margin-top: 15px; /*Haya espacio entre el titulo y el texto*/
+}
+
+/*Funciona para todos los h2*/
+h2 {
+    text-align: center; /*No hace falta poner un display flex*/
+    width: 100%; 
+    border-bottom: 2px solid red;
+    padding-bottom: 10px; /*Espacio entre texto y la linea que tiene justo de bajo*/
+    margin-top: 0; /* Para que ambos títulos peguen arriba igual (algunos navegadores le ponen como un espacio que reulta molesto) */
+}
+
+.foto-flotante {
+    float: right; /*La imagen se va a la derecha*/
+    width: 250px; /*Tamaño fijo de la cajita de la foto*/
+    margin: 10px; /*Margen para que el texto no la toque*/
+    padding: 5px; /*Relleno para que se vea que está contenido en una caja negra (si no pongo esto no se veria el color negro)*/
+    /*Cajita foto*/
+    background-color: #222; /*Paleta color IA (envuelve la foto)*/
+    border-radius: 8px;
+    border: 2px solid red;
+}
+
+.foto-flotante img {
+    width: 100%; /*Ocupe todo el contenedor (no se sale fuera)*/
+    height: auto;
+}
+
+
+figcaption {
+    font-size: 0.8em; /* (RECOMENDACIÓN IA) Esto son las unidades relativas (em) para que el pie de foto mantenga siempre una proporción del 80% respecto al texto principal (me quito lo de los px y me ahorro un dolor de cabeza)*/
+    text-align: center;
+    color: white;
+    font-style: italic; /*Cursiva*/
+    margin-top: 5px; /*Separacion entre texto (pie de foto) e imagen*/
+}
+
+/* 
+------------------------------------
+        Sección detalles
+------------------------------------
+*/
+
+summary {
+    padding: 15px;
+    background-color: #222; /*Paleta de color IA*/
+    color: white;
+    cursor: pointer; /*No se pone el puntero como para escribir que queda feo*/
+    font-weight: bold; /*Negrita*/
+    border: 1px solid red;
+    margin-top: 10px; /*Espacio entre ambos summary*/
+}
+
+summary:hover {
+    background-color: #444; /*Paleta de color IA*/
+    /*Con este color y el otro consigo un efecto muy chulo y elegante*/
+}
+
+#detalles {
+    display: flex;
+    flex-direction: column; /*Los apila en columna*/
+    width: 75%; /*Ocupa el 75% del ancho (se puede ver en el border bottom)*/
+    gap: 20px; /*Espacio entre los desplegables*/
+
+    /* EXPLICACIÓN (mnargin: 0 auto;): 
+    El '0' le dice a la caja: "No quiero espacio extra ni arriba ni abajo". 
+    El 'auto' le dice: "Reparte el hueco que sobre a la izquierda y a la derecha por igual".
+    Resultado: La caja se planta en todo el centro de la pantalla. */
+    /*Si hubiera puesto width: 100%; o no hubiese puesto nada no haria falta esto*/
+    /*No puedo utilizar el justify content porque no tengo padre con display flex ya que este es el padre*/
+    
+    margin: 0 auto; /*CENTRA el contenedor #detalles en la pantalla*/
+
+    /*Cajita que contiene todo*/
+    background-color: grey;
+    padding: 30px;
+    border-radius: 8px;
+    border: 3px solid red;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#detalles details {
+    width: 100%; /*Hace que los details ocupen todo el ancho del 75% del padre (sino pongo esto se veria más pequeño)*/
+}
+
+/*Selector avanzado para cuando el detalle está abierto (no es lo mismo que el hover)
+esto es como el "media quire" es una funcionalidad que tiene css*/
+
+/*El atributo OPEN es solo para la etiqueta DETAILS*/
+details[open] .contenido-interno {
+    padding: 20px;
+    background-color: rgb(63, 60, 60);
+    border: 1px solid red;
+    border-top: none; /*Si no pongo esto es como si se me juntan dos bordes por lo que como resultado tendria un borde grueso*/
+    color: white;
+    overflow: hidden; /*Si el texto es corto el contenedor que envuelve la foto y el texto se achica dando lugar a que la foto se quede fuera de la caja o parte*/
+}
+
+.contenido-interno p {
+    margin-bottom: 20px; /* Crea un espacio fijo debajo de cada párrafo (me ahorra lo de poner br en html) */
+}
+
+/*Copia y pega de .foto-flotante solo que ahora en lugar de float: right; está en left*/
+.foto-flotante2 {
+    float: left; /*La imagen se va a la derecha*/
+    width: 250px; /*Tamaño fijo de la cajita de la foto*/
+    margin: 10px; /*Margen para que el texto no la toque*/
+    padding: 5px; /*Relleno para que se vea que está contenido en una caja negra (si no pongo esto no se veria el color negro)*/
+    /*Cajita foto*/
+    background-color: #222; /*Paleta color IA (envuelve la foto)*/
+    border-radius: 8px;
+    border: 2px solid red;
+}
+
+.foto-flotante2 img {
+    width: 100%; /*Ocupe todo el contenedor (no se sale fuera)*/
+    height: auto;
+}
